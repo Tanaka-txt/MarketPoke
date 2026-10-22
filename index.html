@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+  <script src="" defer>
+    console.log('JS Conectado');
+  </script> 
+  <!-- usamos src e o defer liga o script só depois que toda pagina for lida -->
+
+  <title>MarketPoke</title>
+</head>
+<body>
+  <header class="header">
+    <img src="img/favicon.svg" alt="Logo" id="logo-header">
+    <div class="header-actions">
+      <span class="location"><img src="img/map-pin-fill.svg" alt="pin de mapa" id="pin-header"> Porto Alegre, RS</span>
+      <button class="cart-button"><img src="img/shopping-cart-fill.svg" alt="Carrinho de compras"  id="cart-header"></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero"> <!--heroi-->
+      <div class="hero-content"> <!-- conteudo principal -->
+        <h1>Encontre o café perfeito para qualquer hora do dia</h1>
+        <p>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</p>
+        <ul class="hero-items">
+          <li>Compra simples e segura</li>
+          <li>Entrega rápida e rastreada</li>
+          <li>Embalagem mantém o café intacto</li>
+          <li>O café chega fresquinho até você</li>
+        </ul>
+      </div>
+      <img src="img/favicon.svg" alt="hero-image" id="hero-image">
+    </section>
+
+    <section class="catalog">
+      <h2>Nossos Pokémon</h2>
+      <!-- o card do Pikachu vai aqui -->
+      <div class="catalog-list">
+        <article class="card">
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Pikachu" class="card-image">
+        
+          <div class="card-tags">
+            <span>Elétrico</span>
+          </div>
+        
+          <span class="card-number">#025</span>
+          <h3 class="card-name">pikachu</h3>
+          <p class="card-description">Descrição</p>
+        
+          <div class="card-footer">
+            <p class="card-price">R$ <strong>11,20</strong></p>
+            <div class="card-actions">
+              <div class="counter">
+                <button>−</button>
+                <span>1</span>
+                <button>+</button>
+              </div>
+              <button class="card-cart"><!-- ícone carrinho --></button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

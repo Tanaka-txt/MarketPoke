@@ -1,0 +1,95 @@
+/* Auxilia em repetições */
+:root {
+  /* Produto */
+  --yellow-dark: #C47F17;
+  --yellow: #DBAC2C;
+  --yellow-light: #F1E9C9;
+
+  --purple-dark: #4B2995;
+  --purple: #8047F8;
+  --purple-light: #EBE5F9;
+  /* Base */
+  --base-title: #272221;
+  --base-subtitle:#403937;
+  --base-text: #574F4D;
+  --base-label: #8D8686;
+  --base-hover: #D7D5D5;
+  --base-button: #E6E5E5;
+  --base-input: #EDEDED; 
+  --base-card: #F3F2F2;
+  --background: #FAFAFA;
+  --white: #FFFFFF;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Aplicação da font */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Baloo 2', sans-serif;
+  color: var(--base-title);
+}
+
+/* Header */
+
+.header{
+  background: red;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  align-items: center;
+}
+
+.header-actions{
+  background: greenyellow;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+#logo-header{
+  height: 40px;
+}
+
+/* loc */
+.location{
+  display: flex;
+  border-radius: 6px;
+  border: 0px;
+  background: var(--purple-light);
+  padding: 8px;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--purple);
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem;
+}
+
+#pin-header{
+  width: 22px;
+  height: 28px;
+}
+
+/* Cart button */
+.cart-button{
+  border-radius: 6px;
+  background-color: var(--yellow-light);
+  border: 0px;
+  padding: 8px;
+}
+
+#cart-header{
+  width: 22px;
+  height: 28px;
+  background-color: var(--yellow-light);
+}
+
