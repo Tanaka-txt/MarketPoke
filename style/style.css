@@ -26,10 +26,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100%;
 }
+
 /* Aplicação da font */
 body {
   font-family: 'Roboto', sans-serif;
+
+  background-color: var(--background);
+
   padding-right: 1rem; /*Deixa 1rem de limite de padding antes do 1120*/
   padding-left: 1rem; /*Deixa 1rem de limite de padding antes do 1120*/
 }
@@ -98,9 +103,4 @@ h1, h2, h3 {
   width: 22px;
   height: 28px;
   background-color: var(--yellow-light);
-}
-
-/* Fiz para arrumar a resposividade */
-.card-image{
-  max-width: 100%;
 }
