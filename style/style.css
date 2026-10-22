@@ -30,7 +30,10 @@
 /* Aplicação da font */
 body {
   font-family: 'Roboto', sans-serif;
+  padding-right: 1rem; /*Deixa 1rem de limite de padding antes do 1120*/
+  padding-left: 1rem; /*Deixa 1rem de limite de padding antes do 1120*/
 }
+
 
 h1, h2, h3 {
   font-family: 'Baloo 2', sans-serif;
@@ -40,16 +43,20 @@ h1, h2, h3 {
 /* Header */
 
 .header{
-  background: red;
+  /* background: red; */
   display: flex;
   justify-content: space-between;
   padding-top: 32px;
   padding-bottom: 32px;
   align-items: center;
+
+  max-width: 1120px; /*em 1120 ele n aumenta mais o header*/
+  margin: 0 auto; /*margin aumenta de forma automatica sem subir em top e bottom*/
 }
 
+
 .header-actions{
-  background: greenyellow;
+  /* background: greenyellow;  */
   display: flex;
   gap: 12px;
   align-items: center;
@@ -85,6 +92,7 @@ h1, h2, h3 {
   background-color: var(--yellow-light);
   border: 0px;
   padding: 8px;
+  background-color: red;
 }
 
 #cart-header{
@@ -93,3 +101,7 @@ h1, h2, h3 {
   background-color: var(--yellow-light);
 }
 
+/* Fiz para arrumar a resposividade */
+.card-image{
+  max-width: 100%;
+}
