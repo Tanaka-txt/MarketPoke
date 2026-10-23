@@ -155,6 +155,7 @@ h1, h2, h3 {
 
 #hero-image{
   height: 360px;
+  margin-top: 20px;
 }
 
 .hero-content p{
@@ -162,11 +163,15 @@ h1, h2, h3 {
   color: var(--base-subtitle);
 
   line-height: 1.3;
+
+  margin-top: 16px;
 }
 
 .hero-content h1{
   font-size: 1.5rem; /*24px - Tittle M*/
   color: var(--base-title);
+
+  line-height: 1.3;
 }
 
 @media screen and (min-width: 640px){ /*Menor que isso ativa - Intermediario entre mobile e tablet*/
@@ -201,5 +206,9 @@ h1, h2, h3 {
     font-size: 1.25rem; /*20px - Tittle L*/
     color: var(--base-subtitle);
     line-height: 1.3;
+  }
+
+  #hero-image{
+    margin-top: 0px;
   }
 }
