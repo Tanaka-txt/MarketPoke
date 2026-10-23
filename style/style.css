@@ -54,11 +54,12 @@ h1, h2, h3 {
   padding-top: 32px;
   padding-bottom: 32px;
   align-items: center;
+}
 
+.container { /*Config dos espaçamentos das bordas*/
   max-width: 1120px; /*em 1120 ele n aumenta mais o header*/
   margin: 0 auto; /*margin aumenta de forma automatica sem subir em top e bottom*/
 }
-
 
 .header-actions{
   /* background: greenyellow;  */
@@ -103,4 +104,102 @@ h1, h2, h3 {
   width: 22px;
   height: 28px;
   background-color: var(--yellow-light);
+}
+
+/* Hero */
+
+.hero{
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+
+.hero-items{ /*Reset e padronização dos itens | Base foco em mobile*/
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+  list-style: none;
+
+  margin-top: 33px;
+}
+
+.hero-items li{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#simbolo1, #simbolo2, #simbolo3, #simbolo4{
+  border-radius: 1000px;
+  list-style: none;
+
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+}
+
+#simbolo1{
+  background: var(--yellow-dark);
+}
+
+#simbolo2{
+  background: var(--base-subtitle);
+}
+
+#simbolo3{
+  background:var(--yellow);
+}
+
+#simbolo4{
+  background: var(--purple);
+}
+
+#hero-image{
+  height: 360px;
+}
+
+.hero-content p{
+  font-size: 1rem; /*16px - Tittle M*/
+  color: var(--base-subtitle);
+
+  line-height: 1.3;
+}
+
+.hero-content h1{
+  font-size: 1.5rem; /*24px - Tittle M*/
+  color: var(--base-title);
+}
+
+@media screen and (min-width: 640px){ /*Menor que isso ativa - Intermediario entre mobile e tablet*/
+  .hero-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+  }
+}
+
+@media screen and (min-width: 1024px){/*Laptop + Desktop*/
+  .hero{
+    display: grid;
+    grid-template-columns: 1fr 476px;
+    column-gap: 56px;
+
+    margin-top: 92px;
+    margin-bottom: 92px;
+  }
+  .hero-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+
+
+    margin-top: 66px; /* Muda do celular pois aumenta o espaço*/
+  }
+  .hero-content h1{
+    font-size: 3rem; /*48px*/
+  }
+  .hero-content p{
+    font-size: 1.25rem; /*20px - Tittle L*/
+    color: var(--base-subtitle);
+    line-height: 1.3;
+  }
 }
