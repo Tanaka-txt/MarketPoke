@@ -222,10 +222,16 @@ h1, h2, h3 {
 
 .card{
   background-color: var(--base-card);
-  border-radius: 20px;
+  /* ordem do relógio: esqCima · dirCima · dirBaixo · esqBaixo */
+  border-radius: 6px 36px 6px 36px;
 
-  width: 310px;
-  height: 256px;
+  padding: 0px 20px 20px;
+
+  text-align: center;
+}
+
+.card h3{
+  text-transform: capitalize;
 }
 
 .catalog-list{
@@ -235,25 +241,49 @@ h1, h2, h3 {
 
   column-gap: 32px;
   row-gap: 40px;
+
+  /* Espaço do Titulo do Catalog list */
+  margin-top: 34px;
 }
 
 .card-image{
   image-resolution: inherit;
   background-color: violet;
-  border-radius: 1000px;
+  border-radius: 50%;
 
   width: 120px;
   height: 120px;
+
+  /* Margin negativa para tirar a foto */
+  margin-top: -20px;
 }
 
 .card-tags{
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.card-tags span{
+  text-transform: uppercase;
   background-color: var(--yellow-light);
   color: var(--yellow-dark);
 
-  width: 80px;
-  height: 21px;
   border-radius: 100px;
+
+  padding: 4px 8px;
+  font-size: 0.625rem;
+  font-weight: 700;
+}
+
+.card-footer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-actions{
+  display: flex;
+  gap: 8px;
 }
 
 @media screen and (min-width: 640px){ 
