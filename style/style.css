@@ -6,7 +6,7 @@
   --yellow-light: #F1E9C9;
 
   --purple-dark: #4B2995;
-  --purple: #8047F8;
+  --purple: #8047f8;
   --purple-light: #EBE5F9;
   /* Base */
   --base-title: #272221;
@@ -16,7 +16,7 @@
   --base-hover: #D7D5D5;
   --base-button: #E6E5E5;
   --base-input: #EDEDED; 
-  --base-card: #F3F2F2;
+  --base-card: #f3f2f2;
   --background: #FAFAFA;
   --white: #FFFFFF;
 }
@@ -216,10 +216,6 @@ h1, h2, h3 {
 /* Cards */
 /* Fazer o padrão no mobile e as excessões fora com @media*/
 
-.catalog{
-  background-color: red;
-}
-
 .card{
   background-color: var(--base-card);
   /* ordem do relógio: esqCima · dirCima · dirBaixo · esqBaixo */
@@ -228,6 +224,11 @@ h1, h2, h3 {
   padding: 0px 20px 20px;
 
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .card h3{
@@ -248,7 +249,7 @@ h1, h2, h3 {
 
 .card-image{
   image-resolution: inherit;
-  background-color: violet;
+  background-color: var(--base-card);
   border-radius: 50%;
 
   width: 120px;
@@ -276,14 +277,87 @@ h1, h2, h3 {
   font-weight: 700;
 }
 
+.card-description{
+  display: -webkit-box;          /* um modo de caixa que sabe contar linhas */
+  -webkit-box-orient: vertical;  /* as linhas são contadas de cima para baixo */
+  -webkit-line-clamp: 3;         /* no máximo 3 linhas visíveis */
+  line-clamp: 3;                 /* versão oficial: para o futuro = convenção*/
+  overflow: hidden;              /* o que passar disso fica escondido */
+}
+
 .card-footer{
   display: flex;
   justify-content: space-between;
+
+  padding-top: 33px;
 }
 
 .card-actions{
   display: flex;
   gap: 8px;
+}
+
+/* Acabamento */
+
+.card-price p, 
+.card-price strong { /*REVEERRRRRRRRRRRRRRRRRR*/
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 130;
+
+  color: var(--base-text);
+}
+
+.card-actions button{
+  border: 0px solid black;
+  background-color: transparent;
+  background-image: none;  
+
+  background-color: var(--purple-dark);
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.counter{
+  display: flex;
+  gap: 4px;
+  background-color: var(--base-button);
+  padding: 8px;
+}
+
+.counter button{
+  border: 0px solid black;
+  background-color: transparent;
+  background-image: none;  
+}
+
+.card-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem;
+  margin-top: auto;   /* mola em cima da descrição */
+
+  color: var(--base-label);
+}
+
+.card-name{
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 1.25rem;
+  color: var(--base-subtitle);
+}
+
+.card-number{
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 1.25rem;
+  color: var(--base-subtitle);
+
+  margin-top: 16px;
+}
+
+.catalog h2{
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 2rem;
+
+  color: var(--base-subtitle);
 }
 
 @media screen and (min-width: 640px){ 
