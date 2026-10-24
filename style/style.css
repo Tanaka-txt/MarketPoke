@@ -212,3 +212,58 @@ h1, h2, h3 {
     margin-top: 0px;
   }
 }
+
+/* Cards */
+/* Fazer o padrão no mobile e as excessões fora com @media*/
+
+.catalog{
+  background-color: red;
+}
+
+.card{
+  background-color: var(--base-card);
+  border-radius: 20px;
+
+  width: 310px;
+  height: 256px;
+}
+
+.catalog-list{
+  /* background-color: aqua; */
+  display: grid;
+  grid-template-columns: 1fr;
+
+  column-gap: 32px;
+  row-gap: 40px;
+}
+
+.card-image{
+  image-resolution: inherit;
+  background-color: violet;
+  border-radius: 1000px;
+
+  width: 120px;
+  height: 120px;
+}
+
+.card-tags{
+  text-align: center;
+  background-color: var(--yellow-light);
+  color: var(--yellow-dark);
+
+  width: 80px;
+  height: 21px;
+  border-radius: 100px;
+}
+
+@media screen and (min-width: 640px){ 
+  .catalog-list{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1152px){
+  .catalog-list{
+    grid-template-columns: repeat(4, 1fr); /*evita repetição de 1fr 1fr 1fr 1fr*/
+  }
+}
